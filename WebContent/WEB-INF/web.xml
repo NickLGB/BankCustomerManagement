@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>UserManagement3</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>LoginProcessServlet</display-name>
+    <servlet-name>LoginProcessServlet</servlet-name>
+    <servlet-class>com.intern.controller.LoginProcessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginProcessServlet</servlet-name>
+    <url-pattern>/LoginProcessServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>UsersProcessServlet</display-name>
+    <servlet-name>UsersProcessServlet</servlet-name>
+    <servlet-class>com.intern.controller.UsersProcessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersProcessServlet</servlet-name>
+    <url-pattern>/UsersProcessServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>TransactionServlet</display-name>
+    <servlet-name>TransactionServlet</servlet-name>
+    <servlet-class>com.intern.controller.TransactionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransactionServlet</servlet-name>
+    <url-pattern>/TransactionServlet</url-pattern>
+  </servlet-mapping>   
+  
+  <servlet>
+     <servlet-name>userdetails</servlet-name>
+     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+     <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+ <servlet-mapping>
+     <servlet-name>userdetails</servlet-name>
+     <url-pattern>/userList.jsp</url-pattern>
+     <url-pattern>/user.jsp</url-pattern>
+     <url-pattern>/showTranForIndividual.jsp</url-pattern>
+     <url-pattern>/showTransactions.jsp</url-pattern>
+     <url-pattern>/transaction.jsp</url-pattern>
+     <url-pattern>/home.jsp</url-pattern>
+     <url-pattern>/main.jsp</url-pattern>
+     <url-pattern>/logoff.jsp</url-pattern>
+     <url-pattern>/success.jsp</url-pattern>
+     <url-pattern>/error.jsp</url-pattern>
+     <url-pattern>/userprocess.jsp</url-pattern>
+     <url-pattern>*.html</url-pattern>   
+    </servlet-mapping> 
+    
+</web-app>
